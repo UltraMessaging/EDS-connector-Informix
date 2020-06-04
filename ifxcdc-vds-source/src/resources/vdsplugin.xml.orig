@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><tns:vdsPlugin xmlns:tns="http://www.informatica.com/VdsPlugin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.informatica.com/VdsPlugin vds_plugin.xsd ">
+
+    <tns:id>_CUSTOM_SRC_SAMPLE</tns:id>
+    <tns:displayName>Sample Source</tns:displayName>
+    <tns:version>0.0.1-SNAPSHOT</tns:version>
+    <tns:type>SOURCE</tns:type>
+
+    <!-- Below is the sample field tags added for textControl, checkBoxControl, 
+        listControl, radioGroupControl. You have to add the fields for your sample 
+        source based on the requirement. Example: text field, drop down, check box 
+        , text area etc Note: Please refer vds_plugin.xsd for further details. Path: 
+        VDS-api-reference.zip\schema\vds_plugin.xsd -->
+
+    <tns:configuration>
+        <tns:fields>
+            <tns:field>
+                <tns:textControl>
+                    <tns:name>sample-text-field</tns:name>
+                    <tns:displayName>Sample Text</tns:displayName>
+                    <tns:mandatory>true</tns:mandatory>
+                    <tns:stringTextField>
+                        <tns:secure>false</tns:secure>
+                    </tns:stringTextField>
+                </tns:textControl>
+            </tns:field>
+            <tns:field>
+                <tns:checkBoxControl>
+                    <tns:name>sample-check-box</tns:name>
+                    <tns:displayName>Sample Check Box</tns:displayName>
+                    <tns:default>false</tns:default>
+                </tns:checkBoxControl>
+            </tns:field>
+            <tns:field>
+                <tns:listControl>
+                    <tns:name>sample-list-field</tns:name>
+                    <tns:displayName>Sample List</tns:displayName>
+                    <tns:items>
+                        <tns:item>
+                            <tns:displayName>List Item 1</tns:displayName>
+                            <tns:id>0</tns:id>
+                        </tns:item>
+                        <tns:item>
+                            <tns:displayName>List Item 2</tns:displayName>
+                            <tns:id>1</tns:id>
+                        </tns:item>
+                    </tns:items>
+                    <tns:default>0</tns:default>
+                </tns:listControl>
+            </tns:field>
+            <tns:field>
+                <tns:radioGroupControl>
+                    <tns:name>sample-radio-group</tns:name>
+                    <tns:displayName>Sample Radio Group</tns:displayName>
+                    <tns:items>
+                        <tns:item>
+                            <tns:displayName>Radio Item 1</tns:displayName>
+                            <tns:id>1</tns:id>
+                        </tns:item>
+                        <tns:item>
+                            <tns:displayName>Radio Item 2</tns:displayName>
+                            <tns:id>2</tns:id>
+                        </tns:item>
+                    </tns:items>
+                    <tns:default>1</tns:default>
+                </tns:radioGroupControl>
+            </tns:field>
+        </tns:fields>
+    </tns:configuration>
+    <tns:pluginStatistics>
+        <tns:statistic>
+            <tns:id>1</tns:id>
+            <tns:displayName>Sample Source Plugin Stat1</tns:displayName>
+            <tns:type>CUMULATIVE</tns:type>
+        </tns:statistic>
+        <tns:statistic>
+            <tns:id>2</tns:id>
+            <tns:displayName>Sample Source Plugin Stat2</tns:displayName>
+            <tns:type>CUMULATIVE</tns:type>
+        </tns:statistic>
+    </tns:pluginStatistics>
+    <tns:runTime>
+        <tns:pluginJar>ifxcdc-vds-source.jar</tns:pluginJar>
+        <tns:pluginClass>com.informatica.vds.custom.sources.ifxcdc.SampleSource</tns:pluginClass>
+    </tns:runTime>
+    <tns:helpKey/>
+</tns:vdsPlugin>

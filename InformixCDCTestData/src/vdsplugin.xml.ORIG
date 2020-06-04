@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:vdsPlugin xmlns:tns="http://www.informatica.com/VdsPlugin"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.informatica.com/VdsPlugin vds_plugin.xsd ">
+	<tns:id>CUSTOM_INFORMIX_CDC_SRC</tns:id>
+	<tns:displayName>IfxCDC Multiple Tables</tns:displayName>
+	<tns:version>2.3</tns:version>
+	<tns:type>SOURCE</tns:type>
+	<tns:configuration>
+		<tns:fields>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>host</tns:name>
+					<tns:displayName>Host Name or Address</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>localhost</tns:default>
+						<tns:placeholder>127.0.0.1</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>port</tns:name>
+					<tns:displayName>Host Port</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>9088</tns:default>
+						<tns:placeholder>9088</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>database</tns:name>
+					<tns:displayName>Database Name</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>syscdcv1</tns:default>
+						<tns:placeholder>syscdcv1</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>iserver</tns:name>
+					<tns:displayName>Informix Server</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>ol_informix1170</tns:default>
+						<tns:placeholder>ol_informix1170</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>username</tns:name>
+					<tns:displayName>User Name</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>informix</tns:default>
+						<tns:placeholder>informix</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>pswd</tns:name>
+					<tns:displayName>Password</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>true</tns:secure>
+						<tns:default>informix</tns:default>
+						<tns:placeholder>informix</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>tableToMonitor</tns:name>
+					<tns:displayName>Table To Monitor</tns:displayName>
+					<tns:mandatory>true</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<!--  <tns:default>database:owner.table</tns:default> -->
+						<tns:placeholder>database:owner.table</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>columnsToMonitor</tns:name>
+					<tns:displayName>Columns To Monitor</tns:displayName>
+					<tns:mandatory>true</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<!-- <tns:default>col1,col2,col3</tns:default> -->
+						<tns:placeholder>col1,col2,col3</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>columnSizes</tns:name>
+					<tns:displayName>Column Sizes</tns:displayName>
+					<tns:mandatory>true</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:placeholder>1,2,3</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>timeout</tns:name>
+					<tns:displayName>Timeout</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>-1</tns:default>
+						<tns:placeholder>-1</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>maxrecs</tns:name>
+					<tns:displayName>Maximum Records</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>1</tns:default>
+						<tns:placeholder>1</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+		</tns:fields>
+	</tns:configuration>
+	<tns:runTime>
+		<tns:pluginJar>informixcdc.jar</tns:pluginJar>
+		<tns:pluginClass>com.informatica.presales.sources.informix.cdc.InformixCDCSource</tns:pluginClass>
+	</tns:runTime>
+</tns:vdsPlugin>

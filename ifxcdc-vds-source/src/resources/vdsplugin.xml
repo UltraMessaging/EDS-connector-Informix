@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:vdsPlugin xmlns:tns="http://www.informatica.com/VdsPlugin"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.informatica.com/VdsPlugin vds_plugin.xsd ">
+	<tns:id>CUSTOM_INFORMIX_CDC_SRC_MULTI</tns:id>
+	<tns:displayName>IfxCDC Multiple Tables</tns:displayName>
+	<tns:version>2.3.0.8</tns:version>
+	<tns:type>SOURCE</tns:type>
+	<tns:configuration>
+		<tns:fields>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>configFileName</tns:name>
+					<tns:displayName>Configuration File Location</tns:displayName>
+					<tns:mandatory>true</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>config.xml</tns:default>
+						<tns:placeholder>config.xml</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>username</tns:name>
+					<tns:displayName>User Name</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>false</tns:secure>
+						<tns:default>informix</tns:default>
+						<tns:placeholder>informix</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+			<tns:field>
+				<tns:textControl>
+					<tns:name>pswd</tns:name>
+					<tns:displayName>Password</tns:displayName>
+					<tns:mandatory>false</tns:mandatory>
+					<tns:stringTextField>
+						<tns:secure>true</tns:secure>
+						<tns:default>informix</tns:default>
+						<tns:placeholder>informix</tns:placeholder>
+					</tns:stringTextField>
+				</tns:textControl>
+			</tns:field>
+		</tns:fields>
+	</tns:configuration>
+	<tns:runTime>
+		<tns:pluginJar>ifxcdc-vds-source.jar</tns:pluginJar>
+		<tns:pluginClass>com.informatica.vds.custom.sources.ifxcdc.InformixCDCSource</tns:pluginClass>
+	</tns:runTime>
+</tns:vdsPlugin>

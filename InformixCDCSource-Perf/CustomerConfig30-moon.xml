@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IFX_Connection>
+	<Addr>u060win43</Addr>
+	<Port>6161</Port>
+	<ServiceName>u060win43_moo_soc</ServiceName>
+	<CDCName>syscdcv1</CDCName>
+	<Timeout>5</Timeout>
+	<MaxRecs>1</MaxRecs>
+	<Tables>
+		<Table>
+			<TableIdentifier>40001</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.asnload</TableToMonitor>
+			<ColumnNames>id,rcn,wskusku,case_upc,wskurevision,status,reason_code,units_expected,units_received,pallet_type,ti,hi,code_date_control,code_date,pokey</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40002</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.audits</TableToMonitor>
+			<ColumnNames>transaction_type,transaction_subtyp,date,opid,wskusku,wskurevision,from_load_id,to_load_id,from_load_status,to_load_status,from_qty,to_qty,from_location,to_location,load_type,total_cube,total_weight,reason_code,area,region,vehicle,multiple_load,pallet_move,number,rcn,receiver_no,wavecode,wavewavemonth,wavewaveday,waveid,order_idbase,order_idsub,order_type,order_status,pick_listorder,picklistpickseq,date_planned,date_assigned,sort_aisle,sort_seq,position_inst,no_cases_to_handle,shipment_id,management_divisio,store_no,catalog_group,rog,route,stop,pull_time,delivery_date,trailer,trailer_type,carrier,driver,staging_lane,actual_dock,free_form_text,ti,hi,requested_qty,number_of_loads,balance_on_hand,actual_date,mul_sto_pik_fl,lbr_std_bm,poid,code_date</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40003</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.cat_group_area</TableToMonitor>
+			<ColumnNames>cat_grp,area,description,tpt_zne_cd,strc_rta_fl,tte_cub_am,max_tte_per_plt_qy,dfl_plt_cub_am,plt_pik_hld_fl,ctl_sut_rpt_cpy_qy,ctl_sut_pit_rgn_cd,dfl_dlv_wndw_no,lbl_too_pit_qy,dfl_srv_lvl_cd,tte_fil_rte_pn,prt_plt_kck_fl,sort_code</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40004</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.dockdoor</TableToMonitor>
+			<ColumnNames>dor_loc_nam_tx,sct_no,seq_no,asg_typ_fl,stt_tm,end_tm,dfl_stge_lan_cd,asg_ts</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40005</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.item_defaults</TableToMonitor>
+			<ColumnNames>src_id,fac_cd,com_cd,code_date_control,position,no_cases_to_handle,fp_bypass_qty,pp_bypass_qty,dflt_load_type,area,mixed_date_fl,prw_plbk_fl,max_forward_days,fifo_window,min_tol_day_qy,max_tol_day_qy,max_stack,fresh_first_fl,store_gtd_days</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40006</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.load</TableToMonitor>
+			<ColumnNames>id,order_type,orderid,wskusku,wskurevision,line,receipt_date,n_units,n_cases,units_per_case,load_type,is_container,status,pre_pick_status,locationrow,locationbay,locationtier,locationname,locationsubloc,region,problem,rc,last_move,last_stat_chg,current_opid,last_opid,on_container,load_height,units_allocated,loc_usg_type,driver_bitmap,dest_loc,sort_aisle,sort_seq,cont_done,keep,in_transit,unitsperinpack,rcn,vendor,pre_limbo_status,move_in_seq,core_spare,reason,access,top_loaded,is_partial_pallet,load_width,pallet_type,depth,pick_idid,pick_idseq,tie,high,total_cube,total_weight,receiver_no,shipper_no,store_no,code_date,area,load_stabilization,off_label,mas_cnr_typ_cd,height,lot_no,actual_route,trailer_pos,cas_lbl_fl,pdg_ifr_cpl_fl,pokey</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40007</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.loadpos</TableToMonitor>
+			<ColumnNames>rut_no,trailer_pos,pos_cd,top_lod_fl,lod_id,sto_no,cat_grp,opr_id,pos_ts,uld_ts</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40008</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.location</TableToMonitor>
+			<ColumnNames>locatname,locatrow,locatbay,locattier,locatsubloc,capacity,mhc,height,num_floor_locs,stack_height,checkdigits,weightlimit,xcoor,ycoor,zcoor,xy_area,region,put_region,pick_region,inbound_region,outbound_region,usage_type,inventoried,active,min_qty,max_qty,crit_qty,prob_flag,rc,last_count,opid,count_sched,loads,pp_loads,avail_capac,placer_count,redo,storagetypename,subloc_track_type,access_type,num_accessible,capacity_type,load_type_bm,pick_type_bm,sec_pick_type_bm,merge_type,merge_id,confirm_loc,confirm_load,multi_sku,access,empty_pickup,depth,width,sort_aisle,sort_seq,largest_space,left_overhang,core_spare,pctutilization,lost_loads,loc_acc_factor,aisle,spare1,spare2,spare3,ald_mix_paw_fl,alt_dlv_loc_no,abc_ail_no,trst_max_veh_am</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40009</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.operator</TableToMonitor>
+			<ColumnNames>opid,name,initials,authoriz,wc,wave,lasttrn,lastloc,count_zone,zone,count_mode,audit_pick_details,per_lvl_no,gol_tm,acu_tm,rpt_ct,sft_id,sft_end_dt,sft_end_tm,see_supervisor_fl,ls_process_time,last_login</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40010</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.orders</TableToMonitor>
+			<ColumnNames>order_idbase,order_idsub,order_type,wavecode,wavewavemonth,wavewaveday,waveid,mgmt_div,store_no,cat_grp,delivery_date,rog,bill_div,src_id,facility,release_date,release_no,comment,ship_type,destlocrow,destlocbay,destloctier,destlocname,destlocsubloc,status,pure_lists,pure_picked,split,ship_op,shipped_date,total_lines,total_lanes,total_units,total_pallets,total_weight,total_feet,route,stop,createdate,direct_load,staging_lane,partial_pallets,shortage,batch,label,stage_verified,orderset,auto_plan,ref_key,area,sta_cig_tax_cd,cty_cig_tax_cd,pcs_day_cd,pcs_tm,evt_cd,mer_fl,cdk_id,shp_mtd_cd,trp_cd,trk_rut_no,trk_stp_no,pul_tm,shipmentid,uld_stu_cd,grp_id,dlv_wndw_stt_ts,dlv_wndw_end_ts,pkp_wndw_stt_ts,pkp_wndw_end_ts,split_id,asn_trailer_no,asn_order_fl,orig_route_name_tx,orig_route_cls_ts,orig_src_name_tx,orig_carrier_no,inbound_lane_no,invoice_number</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40011</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.ordetail</TableToMonitor>
+			<ColumnNames>order_idbase,order_idsub,wskusku,wskurevision,line,order_type,status,downloaded_units,units,units_sched,pick_units,staged_units,verified_units,loaded_units,shipped_units,inv_status,cancelled_units,units_per_case,units_per_pack,valueadded,stockum,status_to_pick,mgmt_div,consumer_rtl_amt,case_rtl_amt,exc_price_zone_id,rtl_mult_qty,rtl_type_code,rtl_exc_code,pre_reserved_load,cube,weight,sort_aisle,sort_seq,exception_units,eas_fl,oen,cst_prc_am,pit_prc_fl,sto_ail_no,sto_loc_cd,ecp_fl,srg_cd,srg_qy,hgv_unt_qy,whs_cnl_qy,pdg_scr_fl</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40012</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.pickdetail</TableToMonitor>
+			<ColumnNames>pick_idid,pick_idseq,orderid,line,order_type,status,wskusku,wskurevision,qty,qty_picked,vaflag,units_per_package,sort_aisle,sort_seq,from_load,from_locname,to_load,to_cont,plandestname,wqfunction,wqpriority,pick_method,sort_code,marked_for_replan,date_picked,opid,mul_sto_pik_fl,whs_cnl_qy,pln_stu_cd,priority_incr_time,eas_fl,asg_no,frsh_fst_fl,pdg_scr_fl,trip_seq</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40013</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.pickheader</TableToMonitor>
+			<ColumnNames>pick_listorder,picklistpickseq,status,wave,pick_region,opid,date_planned,date_assigned,date_completed,pick_type,dispatch_type,orderbase,ordersub,total_units,units_picked,last_exc_seq,lastordpckdbase,lastordpckdsub,last_order_time,to_cont,pick_to,num_picks,no_of_cases,shipmentid,mgmt_div,store_no,cat_grp,delivery_date,route,stop,pick_cube,pick_weight,last_replan_seq,mul_sto_pik_fl,mul_sto_pik_pos_no,driver_idx,area,cnr_typ_cd,cur_rpa_no,max_rpa_no,srt_cub_000,srt_cub_020,srt_cub_040,srt_cub_060,srt_cub_080,srt_cub_100,pik_dit_qy,trip_id</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40014</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.purdetail</TableToMonitor>
+			<ColumnNames>pokey,sku,units_reserved,units_received,approve_qty,return_reason_code,off_label,diverter,facility_code,vnd_mas_pak_no,sto_pak_cd</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40015</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.purorder</TableToMonitor>
+			<ColumnNames>poid,create_date,vendor,potype,last_receipt_date,status,carrier_name,facility_code,trans_code,pallet_exchange,ship_from_city,ship_from_state,ship_from_zip,ship_to_code,remarks,due_date,buyer_id,appt_date,diverter,total_open_cases,total_open_pallets,vendor_name,frt_tem_cd,shp_too_loc_cd,pokey,purchase_system</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40016</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.rcndetail</TableToMonitor>
+			<ColumnNames>rcn,sku,status,units_expected,units_received,vendor_viol,return_reason_code,tie,high,receiver_no,random_weight,new_sku,diverter,off_label,facility_code,pallet_exchange,vendor,con_qty,case_unit_ind,hot_qty,pokey,freight_charge</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40017</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.rcnheader</TableToMonitor>
+			<ColumnNames>rcn,status,previous_status,type,vendor,bol,carrier,trailer,vend_viol,opid,statchange,ship_date,create_date,receiving_date,close_date,num_details,units_expected,units_received,customer,pallets,locname,dock_region,dock_code,receiver_no,area,frt_chr_am,ref_key</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40018</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.rfauditdtl</TableToMonitor>
+			<ColumnNames>ser_no,prn_ser_no,aud_opr_id,itm_no,pik_ts,ord_id,pik_qy,aud_qy,aud_ts,loc_no,xtr_itm_fl,dif_rsn_cd</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40019</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.rfaudithdr</TableToMonitor>
+			<ColumnNames>ser_no,aud_opr_id,rqs_opr_id,rqs_lod_id,rqs_typ_cd,rqs_join_opt_cd,aud_stt_ts,aud_stp_ts,acu_opr_id,orl_aud_fl,prn_ser_no,prt_aud_fl,sto_no,lod_typ_cd,pik_lis_id,scn_aud_cpl_fl,aud_loc_cd</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40020</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.route</TableToMonitor>
+			<ColumnNames>rte_no,rog,actual_dock,delivery_date,total_shipments,total_weight,total_feet,pull_time,rte_status,trailer_type,trailer_num,driver,comments,carrier_code,total_stop,staging_lane,current_load_no,load_exceptions,area,wai_scr_fl,bhd_qy,clo_ts,trip_id,trailer_count,srt_cd,rte_own_fl,loading_seq_bypass,original_route</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40021</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.route_info</TableToMonitor>
+			<ColumnNames>route,trailer_pos,ref_key,split_id,start_date,trm_id,stop,last_split,trailer_count,trailer_type,status,opid,pull_time,comment,weight,cube,lod_seq_no,shipmentid,srt_seq_no,driver,trip_id,carrier</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40022</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.shipload</TableToMonitor>
+			<ColumnNames>route,id,date,load_type,status,wskusku,wskurevision,locationname,is_container,on_container,top_loaded,orderid,line,pick_idid,pick_idseq,total_weight,total_cube,n_units,n_cases,from_route,stop,mgmt_div,store_no,cat_grp,delivery_date,units_per_package,last_move,trailer_pos,code_date,lot_no</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40023</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.shipment</TableToMonitor>
+			<ColumnNames>shipmentid,mgmt_div,store_no,cat_grp,delivery_date,route,stop,wavecode,wavewavemonth,wavewaveday,waveid,staging_lane,pull_time,packinglist_req,actual_dock,load_seq_num,num_orders,area,bhd_req_fl,cnr_qy,sta_cig_tax_cd,cty_cig_tax_cd,shp_stu_cd,wit_status,mer_fl,tot_shp_wgt_am,tot_shp_cub_am,tot_cub_adj_qy</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40024</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.store_info</TableToMonitor>
+			<ColumnNames>mgt_div_no,sto_no,adr_tx,cty_tx,sta_tx,zip_cd,dea_no,sto_type_cd,sto_tx,cnv_fl,tob_lic_no,pdg_sto_scn_req_fl</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40025</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.trlposition</TableToMonitor>
+			<ColumnNames>route,trailer_pos,carrier_cd,trailer_no,trailer_type,trailer_status,cur_dock_door,cur_load_no,cur_visit_no,wai_scr_fl,bhd_fl,load_exceptions,tot_lod_wgt_am,tot_lod_cub_am,tot_trl_vist_qy,orig_trailer_type,loading_method</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40026</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.trlshipment</TableToMonitor>
+			<ColumnNames>route,trailer_pos,shipmentid,lod_seq_no,dock_door,est_shp_wgt_am,est_shp_cub_am,tot_lod_wgt_am,tot_lod_cub_am,bhd_req_fl</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40027</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.wave</TableToMonitor>
+			<ColumnNames>wave,status,stat_date,n_orders,n_trailers,driver_idx,sec_repl,n_lanes,short_wave,n_docks,n_routes,total_weight,total_cube,total_cases,atm_wav_cd</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40028</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.wsku</TableToMonitor>
+			<ColumnNames>wskusku,case_shippable,ip_shippable,new_sku,noninventorysku,non_stock,req_exp_date,offset,glass,relabel_at_receipt,pref_locrow,pref_locbay,pref_loctier,pref_locname,pref_locsubloc,substituteskusku,substituteskurev,default_load_type,hostinitstat,initial_status,plant_id,roundup_um,savehostinitstat,std_pallet_width,description,um_unit,crit_inventory,on_site_max,on_site_min,rcv_tolerance,roundup_percent,max_stack,fence_days,hazard_code,velocity_code,fifo_window,qatype,facility_code,pick_bypass,upc,case_upc,buyer_id,vendor,max_forward_days,random_weight_flag,inspection_method,bestdocklocrow,bestdocklocbay,bestdockloctier,bestdocklocname,bestdocklocsubloc,whse_location,kmp_code,size,vendor_pallet_qty,dwo_date,dwo_confirm_date,delete_date,del_conf_date,item_status,code_date_control,catalog_group,position_inst,no_cases_to_handle,descriptive_label,pack,wskurevision,new_revision,stack_pattern,tie,high,std_cases,units_per_case,units_per_pack,unit_weight,unit_height,unit_width,unit_depth,um_ip,ip_weight,ip_height,ip_width,ip_depth,um_case,case_weight,case_height,case_width,case_depth,gtd_day_no,ald_mix_paw_fl,min_tol_day_qy,max_tol_day_qy,rcv_cls_cd,stk_cls_cd,pik_cls_cd,pkg_cls_cd,plt_stk_cls_cd,plt_pik_cls_cd,cnr_stk_cls_cd,cnr_pik_cls_cd,mkt_pcm_cls_cd,haz_mtl_ata_cd,haz_mtl_lta_cd,haz_mtl_ota_cd,lfo_grp_cls_cd,lfo_grp_sub_id,cpt_dpt_cd,cas_pce_pik_fl,slv_pak_qy,ord_mul_qy,alt_ord_mul_qy,cas_pak_qy,com_cd,alt_fac_cd,pog_id,pri_fpk_loc_tx,plt_pik_byp_qy,chk_dgt_no,lot_ctl_flg,pdt_cls_cd,wit_each_pik_fl,wit_ip_pik_fl,wit_cas_pik_fl,wit_each_tte_qty,wit_ip_tte_qty,wit_cas_tte_qty,scr_cnt_qy,cas_scn_fl,ipk_scn_fl,ech_scn_fl,sto_gau_day_no,asrs_fl,cru_qy,ctc_cd,plt_typ_cd,plt_per_rgn_qy,frsh_fst_fl,frsh_fst_day_qy,frsh_fst_scr_qy,prc_sntv_cd,mkt_bskt_cd,lst_upd_ts,win_bld_shp_fl,area,hirs_ter_cd,pdg_ser_lvl_no,pdg_eff_dt,pdg_pik_eff_dt,pdg_dcn_dt,prw_plbk_fl,wit_typ_cd,ato_rcv_fl,purchase_system,win_owned_tol</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40029</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.wskumov</TableToMonitor>
+			<ColumnNames>wskusku,wskurevision,description,size,units_per_case,sun_no_case_shpd,sun_no_pal_picks,sun_num_letdowns,sun_boh,sun_num_load_ids,mon_no_case_shpd,mon_no_pal_picks,mon_num_letdowns,mon_boh,mon_num_load_ids,tue_no_case_shpd,tue_no_pal_picks,tue_num_letdowns,tue_boh,tue_num_load_ids,wed_no_case_shpd,wed_no_pal_picks,wed_num_letdowns,wed_boh,wed_num_load_ids,thu_no_case_shpd,thu_no_pal_picks,thu_num_letdowns,thu_boh,thu_num_load_ids,fri_no_case_shpd,fri_no_pal_picks,fri_num_letdowns,fri_boh,fri_num_load_ids,sat_no_case_shpd,sat_no_pal_picks,sat_num_letdowns,sat_boh,sat_num_load_ids,sun_ano_case_shpd,sun_ano_pal_picks,sun_anum_letdowns,sun_aboh,sun_anum_load_ids,mon_ano_case_shpd,mon_ano_pal_picks,mon_anum_letdowns,mon_aboh,mon_anum_load_ids,tue_ano_case_shpd,tue_ano_pal_picks,tue_anum_letdowns,tue_aboh,tue_anum_load_ids,wed_ano_case_shpd,wed_ano_pal_picks,wed_anum_letdowns,wed_aboh,wed_anum_load_ids,thu_ano_case_shpd,thu_ano_pal_picks,thu_anum_letdowns,thu_aboh,thu_anum_load_ids,fri_ano_case_shpd,fri_ano_pal_picks,fri_anum_letdowns,fri_aboh,fri_anum_load_ids,sat_ano_case_shpd,sat_ano_pal_picks,sat_anum_letdowns,sat_aboh,sat_anum_load_ids,avr_dly_mvnt,olp_dly_forecast,on_site_min,on_site_max,_min,_max,start_date,stop_date</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>40030</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>windb:informix.zonebudget</TableToMonitor>
+			<ColumnNames>wskusku,wskurevision,region,location,repl_type,curqty,pendqty,allocqty,critical,minimum,maximum,requested,wave,pendtarget,batchrequest,default_dest,active,um_unit,facility_code,sort_aisle,sort_seq,classa,cas_dyn_max_qy,stk_zne_pen_qy,stk_zne_non_pen_qy,primary_flag,del_fl,stockzonewave</ColumnNames>
+			<ColumnSizes>0,0,0</ColumnSizes>
+		</Table>
+	</Tables>
+</IFX_Connection>

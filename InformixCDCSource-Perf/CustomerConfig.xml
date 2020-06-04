@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IFX_Connection>
+	<Addr>192.168.81.20</Addr>
+	<Port>9088</Port>
+	<ServiceName>ol_informix1170_2</ServiceName>
+	<CDCName>syscdcv1</CDCName>
+	<Timeout>5</Timeout>
+	<MaxRecs>10</MaxRecs>
+	<Tables>
+		<Table>
+			<TableIdentifier>30001</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>customer:informix.audits</TableToMonitor>
+			<ColumnNames>transaction_type,transaction_subtyp,date,opid,wskusku,wskurevision,from_load_id,to_load_id,from_load_status,to_load_status,from_qty,to_qty,from_location,to_location,load_type,total_cube,total_weight,reason_code,area,region,vehicle,multiple_load,pallet_move,number,rcn,receiver_no,wavecode,wavewavemonth,wavewaveday,waveid,order_idbase,order_idsub,order_type,order_status,pick_listorder,picklistpickseq,date_planned,date_assigned,sort_aisle,sort_seq,position_inst,no_cases_to_handle,shipment_id,management_divisio,store_no,catalog_group,rog,route,stop,pull_time,delivery_date,trailer,trailer_type,carrier,driver,staging_lane,actual_dock,free_form_text,ti,hi,requested_qty,number_of_loads,balance_on_hand,actual_date,mul_sto_pik_fl,lbr_std_bm,poid,code_date</ColumnNames>
+			<ColumnSizes>4,2,5,20,18</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>30002</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>customer:informix.load</TableToMonitor>
+			<ColumnNames>id,order_type,orderid,wskusku,wskurevision,line,receipt_date,n_units,n_cases,units_per_case,load_type,is_container,status,pre_pick_status,locationrow,locationbay,locationtier,locationname,locationsubloc,region,problem,rc,last_move,last_stat_chg,current_opid,last_opid,on_container,load_height,units_allocated,loc_usg_type,driver_bitmap,dest_loc,sort_aisle,sort_seq,cont_done,keep,in_transit,unitsperinpack,rcn,vendor,pre_limbo_status,move_in_seq,core_spare,reason,access,top_loaded,is_partial_pallet,load_width,pallet_type,depth,pick_idid,pick_idseq,tie,high,total_cube,total_weight,receiver_no,shipper_no,store_no,code_date,area,load_stabilization,off_label,mas_cnr_typ_cd,height,lot_no,actual_route,trailer_pos,cas_lbl_fl,pdg_ifr_cpl_fl,pokey</ColumnNames>
+			<ColumnSizes>4,2,5,20,18,7,255</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>30003</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>customer:informix.ordetail</TableToMonitor>
+			<ColumnNames>order_idbase,order_idsub,wskusku,wskurevision,line,order_type,status,downloaded_units,units,units_sched,pick_units,staged_units,verified_units,loaded_units,shipped_units,inv_status,cancelled_units,units_per_case,units_per_pack,valueadded,stockum,status_to_pick,mgmt_div,consumer_rtl_amt,case_rtl_amt,exc_price_zone_id,rtl_mult_qty,rtl_type_code,rtl_exc_code,pre_reserved_load,cube,weight,sort_aisle,sort_seq,exception_units,eas_fl,oen,cst_prc_am,pit_prc_fl,sto_ail_no,sto_loc_cd,ecp_fl,srg_cd,srg_qy,hgv_unt_qy,whs_cnl_qy,pdg_scr_fl</ColumnNames>
+			<ColumnSizes>4,2,8,8,255</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>30004</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>customer:informix.pickdetail</TableToMonitor>
+			<ColumnNames>pick_idid,pick_idseq,orderid,line,order_type,status,wskusku,wskurevision,qty,qty_picked,vaflag,units_per_package,sort_aisle,sort_seq,from_load,from_locname,to_load,to_cont,plandestname,wqfunction,wqpriority,pick_method,sort_code,marked_for_replan,date_picked,opid,mul_sto_pik_fl,whs_cnl_qy,pln_stu_cd,priority_incr_time,eas_fl,asg_no,frsh_fst_fl,pdg_scr_fl,trip_seq</ColumnNames>
+			<ColumnSizes>4,2,8,8,255</ColumnSizes>
+		</Table>
+	</Tables>
+</IFX_Connection>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IFX_Connection>
+	<Addr>192.168.81.20</Addr>
+	<Port>9088</Port>
+	<ServiceName>ol_informix1170_2</ServiceName>
+	<CDCName>syscdcv1</CDCName>
+	<Timeout>-1</Timeout>
+	<MaxRecs>1</MaxRecs>
+	<Tables>
+		<Table>
+			<TableIdentifier>10001</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>restock:informix.sports</TableToMonitor>
+			<ColumnNames>catalog_no,stock_no,mfg_code,mfg_name,phone,descript</ColumnNames>
+			<ColumnSizes>4,2,5,20,18</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>10002</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>restock:informix.sports2</TableToMonitor>
+			<ColumnNames>catalog_no,stock_no,mfg_code,mfg_name,phone,date,descript</ColumnNames>
+			<ColumnSizes>4,2,5,20,18,7,255</ColumnSizes>
+		</Table>
+		<Table>
+			<TableIdentifier>10003</TableIdentifier>
+			<!-- database:user.tablename -->
+			<TableToMonitor>restock:informix.testtbl1</TableToMonitor>
+			<ColumnNames>col_serial,col_smallint,col_char_8,col_datetime,col_varchar</ColumnNames>
+			<ColumnSizes>4,2,8,8,255</ColumnSizes>
+		</Table>
+	</Tables>
+</IFX_Connection>
