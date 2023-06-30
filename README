@@ -1,2 +1,9 @@
 This is the EDS connector for access to Informix Database.
 
+# ATTENTION!!!!!
+
+The code in this repo is presented as example code. It is not supported product from Informatica. It is not being maintained.
+
+Note that it is dependent on many third-party packages that have serious vulnerabilities in various versions.
+Informatica cannot be held responsible for use of this code that results in security flaws.
+If you use this code, its continued maintenance is your responsibility.
